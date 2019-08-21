@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    {% load static %}
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <title>潛龍的故鄉</title>
+    <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">-->
+    <link rel="stylesheet" type="text/css" href={% static "playlist/css/bootstrap-4.0.0.min.css" %}/>
+
+    <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>-->
+    <script src={% static "playlist/js/jquery-3.3.1.min.js" %}></script>
+    <!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>-->
+    <script src={% static "playlist/js/bootstrap-3.3.7.min.js" %}></script>
+    <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>-->
+    <script src={% static "playlist/js/wow.min.js" %}></script>
+    <script>
+            new WOW().init();
+    </script>
+    <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>-->
+    <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/shortcuts/infinite.min.js"></script>-->
+    <!--<link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" rel="stylesheet"  />-->
+    <link rel="stylesheet" type="text/css" href={% static "playlist/css/animate.css" %}/>
+    <link rel="stylesheet" type="text/css" href={% static "playlist/css/gallery_list.css" %}/>
+</head>
+
+<body>
+
+        <ul class="mynavbar">
+
+        <div style="width:58px;height:60px;display:inline-block;margin-top:10px;margin-left:30px">
+            <img x="0" y="0" width="100%" height="100%" src={% static "playlist/images/story_logo_navbar.png" %} alt="Image">
+        </div>
+
+        <div style="width:218px;height:60px;display:inline-block;margin-top:10px;margin-left:20px">
+            <img x="0" y="0" width="100%" height="100%" src={% static "playlist/images/title_navbar.png" %} alt="Image">
+        </div>
+
+        <li class="mynavbar_item" onclick="window.history.back();"><a href="#">上一頁</a></li>
+        <li class="mynavbar_item"><a href="{% url "homepage" %}#section_selection">&nbsp;&nbsp;目錄&nbsp;&nbsp;</a></li>
+        <li class="mynavbar_item"><a href={% url "homepage" %}>&nbsp;&nbsp;首頁&nbsp;&nbsp;</a></li>
+        </ul>
+
+        <div class="gallery_list_background_part1">
+		    <img x="0" y="0" width="100%" height="100%" src={% static "playlist/images/gallery_list_background.png" %} alt="Image">
+	    </div>
+
+        <div class="gallery_list_title">
+            {% block gallery_group %}
+            {% endblock %}
+        </div>
+
+        {% if video_data %}
+            <nav style="margin-top: 30px;">
+                <ul class="pagination  pagination-lg justify-content-center">
+                    {% if video_data.has_previous %}
+                        <li class="page-item"><a class="page-link" href="?page={{ video_data.previous_page_number }}">&laquo;</a></li>
+                    {% else %}
+                        <li class="page-item disabled"><span class="page-link">&laquo;</span></li>
+                    {% endif %}
+                    {% for i in video_data.paginator.page_range %}
+                        {% if video_data.number == i %}
+                            <li class="page-item active"><span class="page-link">{{ i }} <span class="sr-only">(current)</span></span></li>
+                        {% else %}
+                            <li class="page-item"><a class="page-link" href="?page={{ i }}">{{ i }}</a></li>
+                        {% endif %}
+                    {% endfor %}
+                    {% if video_data.has_next %}
+                        <li class="page-item"><a class="page-link" href="?page={{ video_data.next_page_number }}">&raquo;</a></li>
+                    {% else %}
+                        <li class="page-item disabled"><span class="page-link">&raquo;</span></li>
+                    {% endif %}
+                </ul>
+            </nav>
+            {% for cover_imgs, title, video in video_data %}
+
+                {% if title %}
+                <a href= "view/{{video}}" style="color:black">
+                {% endif %}
+
+                    {% if forloop.counter0|divisibleby:"4" %}
+                        <div class="gallery_list_row">
+                    {% endif %}
+                            
+                        {% if forloop.counter|divisibleby:"4" %}
+                            <div class="gallery_list_item" style="margin-right:0px;">
+                        {% else %}
+                            <div class="gallery_list_item">
+                        {% endif %}
+
+                            {% if cover_imgs %}
+                            <img x="0" y="0" height="300px" src={{cover_imgs.url}} alt="Image">
+                            {% endif %}
+
+                            <div class="gallery_label">
+                                <p class="gallery_title">{{ title }}</p>
+                                <hr class="gallery_label_line">
+                                {% if title %}
+                                    {% if description %}
+                                        <span class="gallery_caption">{{ description }}</span>
+                                    {% else %}
+                                        <span class="gallery_caption">&nbsp;</span>
+                                    {% endif %}
+                                {% else %}
+                                    <span class="gallery_caption">尚無相簿</span>
+                                {% endif %}
+                            </div>
+
+                        </div>
+
+
+                {% if title %}
+                    </a>
+                {% endif %}
+
+            
+                {% if forloop.counter|divisibleby:"4" or forloop.counter == video_data|length %}
+                    </div>
+                {% endif %}
+            {% endfor %}
+
+            <nav style="margin-top: 30px;">
+                <ul class="pagination  pagination-lg justify-content-center">
+                    {% if video_data.has_previous %}
+                        <li class="page-item"><a class="page-link" href="?page={{ video_data.previous_page_number }}">&laquo;</a></li>
+                    {% else %}
+                        <li class="page-item disabled"><span class="page-link">&laquo;</span></li>
+                    {% endif %}
+                    {% for i in video_data.paginator.page_range %}
+                        {% if video_data.number == i %}
+                            <li class="page-item active"><span class="page-link">{{ i }} <span class="sr-only">(current)</span></span></li>
+                        {% else %}
+                            <li class="page-item"><a class="page-link" href="?page={{ i }}">{{ i }}</a></li>
+                        {% endif %}
+                    {% endfor %}
+                    {% if video_data.has_next %}
+                        <li class="page-item"><a class="page-link" href="?page={{ video_data.next_page_number }}">&raquo;</a></li>
+                    {% else %}
+                        <li class="page-item disabled"><span class="page-link">&raquo;</span></li>
+                    {% endif %}
+                </ul>
+            </nav>
+
+            <footer class="container-fluid text-center">
+                <p>海軍陸戰隊&nbsp;新兵訓練中心&nbsp;龍泉故事館©Copyright 2019.</p>
+            </footer>
+
+        {% else %}
+
+            <div class="no_album">
+                尚無相簿
+            </div>
+            <footer class="container-fluid text-center" style="position: absolute">
+                <p>海軍陸戰隊&nbsp;新兵訓練中心&nbsp;潛龍的故鄉©Copyright 2019.</p>
+            </footer>
+
+        {% endif %}
+
+        <script>
+            const idleDurationSecs = 120;    // X number of seconds
+            const redirectUrl = {% url "homepage" %};  // Redirect idle users to this URL
+            let idleTimeout; // variable to hold the timeout, do not modify
+
+            const resetIdleTimeout = function() {
+
+                // Clears the existing timeout
+                if(idleTimeout) clearTimeout(idleTimeout);
+
+                // Set a new idle timeout to load the redirectUrl after idleDurationSecs
+                idleTimeout = setTimeout(() => location.href = redirectUrl, idleDurationSecs * 1000);
+            };
+
+            // Init on page load
+            resetIdleTimeout();
+
+            // Reset the idle timeout on any of the events listed below
+            ['click', 'touchstart', 'mousemove'].forEach(evt =>
+                document.addEventListener(evt, resetIdleTimeout, false)
+            );
+        </script>
+
+</body>
+
+</html>

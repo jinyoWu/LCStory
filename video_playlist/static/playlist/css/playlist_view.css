@@ -1,0 +1,233 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --web-view-ids: gallery_view;
+}
+
+.gallery_view * {
+    margin: 0;
+    padding: 0;
+}
+
+.gallery_view {
+  position: absolute;
+  box-sizing: border-box;
+  width: 1920px;
+  background-color: #FFFFFF;
+  overflow: auto;
+  margin: 0;
+  padding: 0;
+  --web-view-name: gallery-view;
+  --web-view-id: gallery_view;
+  --web-enable-deep-linking: true;
+}
+
+ul {
+  z-index: 2;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #E9DCC2;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height:80px;
+  opacity: 0.8;
+}
+
+li {
+  float: right;
+  height:80px;
+  background-color: #E9DCC2;
+  border-left:3px solid;
+  border-color:#C6AE80;
+  width: 150px;
+}
+
+li a {
+  display: block;
+  text-align: center;
+  padding: 28px 24px;
+  text-decoration: none;
+  font-size:18px;
+  font-family: 微軟正黑體;
+  font-weight: bold;
+  color:#5A5A5A;
+}
+
+li a:hover {
+  background-color: #337AB7;
+  color: #FFFFFF;
+}
+
+li a:active {
+  background-color: #337AB7;
+  color: #FFFFFF;
+  height:68px;
+  padding: 22px 24px;
+}
+
+li:active {
+  border-left:6px solid;
+  border-top:6px solid;
+  border-bottom:6px solid;
+  border-right:3px solid;
+  border-color:#C6AE80;
+}
+
+.gallery_view_background {
+  /*position: absolute;*/
+  overflow: visible;
+  width: 1920px;
+  height: 600px;
+  /*left: 0px;*/
+  /*top: 0px;*/
+  opacity:0.6;
+}
+
+.gallery_view_album_name {
+    text-align: center;
+    padding: 0px 20px;
+    line-height: 180px;
+    font-family: 金梅毛國際行書碼;
+    font-weight: bold;
+    font-size: 72px;
+    margin-bottom: 0px;
+    width: 1920px;
+    height: 180px;
+  overflow: visible;
+  position: absolute;
+  top: 230px;
+  color:#000000;
+}
+
+.gallery_view_album_text {
+    text-align: center;
+    padding: 0px 300px;
+    line-height: 60px;
+    font-family: Hiragino Kaku Gothic Pro;
+    font-weight: bold;
+    font-size: 24px;
+    margin-bottom: 0px;
+    width: 1920px;
+    height: 120px;
+  overflow: visible;
+  position: absolute;
+  top: 410px;
+  color:#000000;
+}
+
+.gallery_view_row {
+  padding: 60px 64px;
+  width: 1920px;
+  overflow: visible;
+}
+
+.gallery_view_image {
+  width: 400px;
+  height: 300px;
+  margin-right: 59px;
+  display: inline-block;
+  cursor: pointer;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 2; /* Sit on top */
+  /*padding-top: 100px; [> Location of the box <]*/
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+
+/* Modal Content (image) */
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 60%;
+  max-width: 1680px;
+  vertical-align: middle;
+}
+
+/* Caption of Modal Image */
+.caption {
+  margin: auto;
+  display: block;
+  width: 60%;
+  left: 20%;
+  position: absolute;
+  max-width: 1680px;
+  text-align: center;
+  color: #FFFFFF;
+  font-size: 24px;
+  font-family: 微軟正黑體;
+  font-weight: bold;
+  padding: 10px 0px;
+  height: 90px;
+}
+
+/* Add Animation */
+/*.modal-content, .caption {*/
+  /*-webkit-animation-name: zoom;*/
+  /*-webkit-animation-duration: 0.6s;*/
+  /*animation-name: zoom;*/
+  /*animation-duration: 0.6s;*/
+/*}*/
+
+@-webkit-keyframes zoom {
+  from {-webkit-transform: scale(0)}
+  to {-webkit-transform: scale(1)}
+}
+
+@keyframes zoom {
+  from {transform: scale(0.1)}
+  to {transform: scale(1)}
+}
+
+.next, .prev {
+    position:absolute;
+    z-index:3;
+    font-size: 120px;
+    top:40%;
+    padding:10px;
+    cursor:pointer;
+    color: #AAAAAA;
+}
+
+.next {
+    right: 13%;
+}
+
+.prev {
+    left: 13%;
+}
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 1680px){
+  .modal-content {
+    width: 60%;
+  }
+}
+
+footer {
+	background-color: #A33933;
+	padding-top: 10px;
+	padding-bottom: 0px;
+	color: #ffffff;
+	font-size: 20px;
+	font-family: 微軟正黑體;
+	font-weight: bold;
+	width: 1920px;
+	position: relative;
+	bottom: 0px;
+}

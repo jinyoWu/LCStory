@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    {% load static %}
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <title>潛龍的故鄉</title>
+    <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">-->
+    <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>-->
+    <script src={% static "playlist/js/jquery-3.3.1.min.js" %}></script>
+    <!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>-->
+    <script src={% static "playlist/js/bootstrap-3.3.7.min.js" %}></script>
+    <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>-->
+    <script src={% static "playlist/js/wow.min.js" %}></script>
+    <script>
+            new WOW().init();
+    </script>
+    <!--<link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" rel="stylesheet" />-->
+    <link rel="stylesheet" type="text/css" href={% static "playlist/css/animate.css" %}/>
+    <link rel="stylesheet" type="text/css" href={% static "playlist/css/homepage.css" %}/>
+    <!--<link rel="stylesheet" type="text/css" href={% static "playlist/css/bootstrap-3.3.7.min.css" %}/>-->
+    <link rel="stylesheet" type="text/css" href={% static "playlist/css/bootstrap-4.0.0.min.css" %}/>
+
+    <script>
+
+        function replay(element_id) {
+            var elem = document.getElementById(element_id);
+            var new_obj = elem.cloneNode(true);
+            elem.parentNode.replaceChild(new_obj, elem);
+        }
+
+        function replay_section(section_name) {
+            replay(section_name + "_title");
+            replay(section_name + "_hr");
+            replay(section_name + "_text_1");
+            replay(section_name + "_text_2");
+            replay(section_name + "_text_3");
+            replay(section_name + "_playlist_button");
+
+        }
+
+        $(function() {
+          $('#navbar_homepage_button').click(function () {
+            $('html,body').animate({scrollTop:$('#section_homepage').offset().top}, 800);
+          });
+        });
+
+        $(function() {
+          $('#section_homepage').click(function () {
+            $('html,body').animate({scrollTop:$('#section_selection').offset().top}, 800);
+          });
+        });
+
+        $(function() {
+          $('#start_arrow').click(function () {
+            $('html,body').animate({scrollTop:$('#section_selection').offset().top}, 800);
+          });
+        });
+
+        $(function() {
+          $('#navbar_story_button').click(function () {
+            $('html,body').animate({scrollTop:$('#section_selection').offset().top}, 800);
+          });
+        });
+
+        $(function() {
+          $('#selection_voluntary_button').click(function () {
+            $('html,body').animate({scrollTop:$('#section_voluntary').offset().top}, 800);
+
+            replay_section("voluntary");
+          });
+        });
+
+        $(function() {
+          $('#navbar_voluntary_button').click(function () {
+            $('html,body').animate({scrollTop:$('#section_voluntary').offset().top}, 800);
+
+            replay_section("voluntary");
+          });
+        });
+
+        $(function() {
+          $('#selection_mandatory_button').click(function () {
+            $('html,body').animate({scrollTop:$('#section_mandatory').offset().top}, 800);
+
+            replay_section("mandatory");
+          });
+        });
+
+        $(function() {
+          $('#navbar_mandatory_button').click(function () {
+            $('html,body').animate({scrollTop:$('#section_mandatory').offset().top}, 800);
+
+            replay_section("mandatory");
+          });
+        });
+
+    </script>
+
+</head>
+
+<body>
+
+    <section id="section_homepage" class="homepage">
+
+        <div class="homepage_background">
+            <img x="0" y="0" width="100%" height="100%" src={% static "playlist/images/home_background.jpg" %} alt="Image">
+        </div>
+
+        <div id="homepage_text_1">
+            <span>龍泉新訓中心是海軍陸戰隊訓練的根基，也是每一位陸戰隊士<br/>兵由民轉兵的軍事教育基地，自成立以來已培訓上萬名隊員。</span>
+        </div>
+
+        <div id="homepage_text_2">
+            <span>時代巨輪不停轉動，國際情勢日新月異，在歷經歲月的永恆之<br/>火中，驍勇善戰的陸戰隊隊員將薪火相傳永不止息。</span>
+        </div>
+
+        <div id="homepage_text_3">
+            <span>讓我們一起感受歷史故事的意義，體會人生的價值使命。</span>
+        </div>
+
+        <div class="homepage_title">
+            <img x="0" y="0" width="100%" height="100%" src={% static "playlist/images/title_new.png" %} alt="Image">
+        </div>
+
+        <div class="homepage_start_arrow" id="start_arrow">
+            <img x="0" y="0" width="100%" height="100%" src={% static "playlist/images/start_arrow_new.gif" %} alt="Image">
+        </div>
+
+    </section>
+
+    <section id="section_selection" class="selection">
+
+        <div class="selection_background">
+            <img x="0" y="0" width="100%" height="100%" src={% static "playlist/images/selection_background.jpg" %} alt="Image">
+        </div>
+
+        <div class="selection_voluntary_part" id="selection_voluntary_button">
+
+            <img x="0" y="0" width="100%" src={% static "playlist/images/select_voluntary_image_update.jpg" %} alt="Image">
+
+            <div>
+                <p class="container_voluntary">志&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;願&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;役</p>
+                <hr class="selection_voluntary_hr">
+                <span class="selection_voluntary_content">志願役士兵在龍泉新訓中心接受為期8週的入伍訓練，再至陸<br/>&nbsp;戰隊學校實施8週分科教育後，到部隊服務，民國106年1月起本<br/>&nbsp;中心第三營主要任務以接訓志願士兵為主，義務役士兵為輔。</span>
+            </div>
+
+        </div>
+
+        <div class="selection_mandatory_part" id="selection_mandatory_button">
+
+            <img x="0" y="0" width="100%" src={% static "playlist/images/select_mandatory_image_update.jpg" %} alt="Image">
+
+            <div>
+                <p class="container_mandatory">軍&nbsp;&nbsp;&nbsp;事&nbsp;&nbsp;&nbsp;訓&nbsp;&nbsp;&nbsp;練&nbsp;&nbsp;&nbsp;役</p>
+                <hr class="selection_mandatory_hr">
+                <span class="selection_mandatory_content">因應國家兵役制度的改變，龍泉新訓中心於民國102起開始接<br/>&nbsp;訓軍事訓練役士兵，並針對每一梯次的役男進行為期16週的軍事<br/>&nbsp;訓練。</span>
+            </div>
+
+        </div>
+
+    </section>
+
+    <nav id="homepage_navbar">
+        <ul>
+            <div style="width:58px;height:60px;display:inline-block;margin-top:10px;margin-left:30px">
+                <img x="0" y="0" width="100%" height="100%" src={% static "playlist/images/story_logo_navbar.png" %} alt="Image">
+            </div>
+
+            <div style="width:218px;height:60px;display:inline-block;margin-top:10px;margin-left:20px">
+                <img x="0" y="0" width="100%" height="100%" src={% static "playlist/images/title_navbar.png" %} alt="Image">
+            </div>
+
+            <li id="navbar_mandatory_button"><a href="#" class="navbar_mandatory_text">軍事訓練役</a></li>
+            <li id="navbar_voluntary_button"><a href="#" class="navbar_voluntary_text">志願役</a></li>
+            <li id="navbar_story_button"><a href="#" class="navbar_story_text">目錄</a></li>
+            <li id="navbar_homepage_button"><a href="#" class="navbar_homepage_text active">首頁</a></li>
+        </ul>
+    </nav>
+
+    <section id="section_voluntary" class="voluntary">
+
+        <div class="voluntary_background" id="voluntary_background">
+            <img x="0" y="0" width="100%" height="100%" src={% static "playlist/images/voluntary_background_image.png" %} alt="Image">
+        </div>
+
+        <div class="voluntary_title animated wow fadeInLeft" id="voluntary_title">
+            <img x="0" y="0" width="100%" height="100%" src={% static "playlist/images/voluntary_title.png" %} alt="Image">
+        </div>
+
+        <hr class="voluntary_hr animated wow fadeInLeft" id="voluntary_hr">
+
+        <div id="voluntary_text_1" class="voluntary_text_1 animated wow fadeInLeft">
+            <span class="voluntary_first_word">啟</span>
+            <span>程，只是第一步，夢想路上未完，待續...</span>
+        </div>
+
+        <div id="voluntary_text_2" class="voluntary_text_2 animated wow fadeInLeft">
+            <span>我們看不見自己的樣子，也看不見水的深度，</span>
+        </div>
+
+        <div id="voluntary_text_3" class="voluntary_text_3 animated wow fadeInLeft">
+            <span>大家都只是一隻小蝌蚪，就在烈日暴雨來臨，蛻變成夢想的綠蛙。</span>
+        </div>
+
+        <div>
+            <a href={% url "voluntary_playlist" %}>
+                <button class="voluntary_playlist_button animated wow fadeInLeft" id="voluntary_playlist_button"><span>觀看影片 </span></button>
+            </a>
+        </div>
+
+    </section>
+
+    <section id="section_mandatory" class="mandatory">
+
+        <div class="mandatory_background" id="mandatory_background">
+            <img x="0" y="0" width="100%" height="100%" src={% static "playlist/images/mandatory_background_image.jpg" %} alt="Image">
+        </div>
+
+        <div class="mandatory_title animated wow fadeInLeft" id="mandatory_title">
+            <img x="0" y="0" width="100%" height="100%" src={% static "playlist/images/mandatory_title.png" %} alt="Image">
+        </div>
+
+        <hr class="mandatory_hr animated wow fadeInLeft" id="mandatory_hr">
+
+        <div id="mandatory_text_1" class="mandatory_text_1 animated wow fadeInLeft">
+            <span class="mandatory_first_word">只</span>
+            <span>有當過兵的人，才懂當兵的心情。</span>
+        </div>
+
+        <div id="mandatory_text_2" class="mandatory_text_2 animated wow fadeInLeft">
+            <span>雖然年代不同，但跟老前輩們看的是一樣的星空，</span>
+        </div>
+
+        <div id="mandatory_text_3" class="mandatory_text_3 animated wow fadeInLeft">
+            <span>一樣的想家，一樣的新訓，營區的草皮，現在由他們的汗水繼續灌溉。</span>
+        </div>
+
+        <div>
+            <a href={% url "mandatory_playlist" %}>
+                <button class="mandatory_playlist_button animated wow fadeInLeft" id="mandatory_playlist_button"><span>觀看影片 </span></button>
+            </a>
+        </div>
+    </section>
+
+
+    <footer class="container-fluid text-center">
+        <p>海軍陸戰隊&nbsp;新兵訓練中心&nbsp;潛龍的故鄉©Copyright 2019.</p>
+    </footer>
+
+
+
+    <script>
+
+    // When the user scrolls down 20px from the top of the document, slide down the navbar
+    window.onscroll = function() {scrollFunction()};
+    function scrollFunction() {
+
+      if (document.body.scrollTop >= 2160 || document.documentElement.scrollTop >= 2160) {
+        document.getElementById("homepage_navbar").style.top = "0";
+      } else {
+        document.getElementById("homepage_navbar").style.top = "-80px";
+      }
+
+    }
+
+    </script>
+
+    <script>
+
+    (function() {
+
+        var navLinks = $('nav ul li a'),
+            navH = $('nav').height(),
+            section = $('section'),
+            documentEl = $(document);
+
+            documentEl.on('scroll', function() {
+                var currentScrollPos = documentEl.scrollTop();
+
+                section.each(function() {
+                    var self_section = $(this);
+                    if ( self_section.offset().top < (currentScrollPos + navH) && (currentScrollPos + navH) < (self_section.offset().top + self_section.outerHeight()) ) {
+                        var targetClass = '.' + 'navbar_' + self_section.attr('class') + '_text';
+                        navLinks.removeClass('active');
+                        $(targetClass).addClass('active');
+                    }
+                });
+            });
+
+    })();
+
+    </script>
+
+</body>
+
+</html>

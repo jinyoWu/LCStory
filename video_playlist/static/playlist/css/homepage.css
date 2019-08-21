@@ -1,0 +1,612 @@
+body {
+	margin: 0;
+	padding: 0;
+	position: relative;
+}
+
+:root {
+	--web-view-ids: homepage;
+}
+
+#homepage * {
+	margin: 0;
+	padding: 0;
+}
+
+#homepage {
+	position: absolute;
+	box-sizing: border-box;
+	background: #E5E5E5;
+	width: 1920px;
+	height: 1080px;
+	background-color: #E9DCC2;
+	overflow: hidden;
+	margin: 0;
+	padding: 0;
+	opacity: 1;
+	--web-view-name: homepage;
+	--web-view-id: homepage;
+	--web-enable-deep-linking: true;
+}
+
+#homepage_text_1 {
+	opacity: 1;
+	position: absolute;
+	left: 450px;
+	top: 618px;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	overflow: visible;
+	width: 972px;
+	white-space: nowrap;
+	line-height: 36px;
+	margin-top: -3px;
+	text-align: left;
+	font-family: 華康魏碑體;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 36px;
+	color: #000000;
+}
+
+#homepage_text_2 {
+	opacity: 1;
+	position: absolute;
+	left: 450px;
+	top: 718px;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	overflow: visible;
+	width: 972px;
+	white-space: nowrap;
+	line-height: 36px;
+	margin-top: -3px;
+	text-align: left;
+	font-family: 華康魏碑體;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 36px;
+	color: #000000;
+}
+
+#homepage_text_3 {
+	opacity: 1;
+	position: absolute;
+	left: 450px;
+	top: 818px;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	overflow: visible;
+	width: 900px;
+	white-space: nowrap;
+	line-height: 36px;
+	margin-top: -3px;
+	text-align: center;
+	font-family: 華康魏碑體;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 36px;
+	color: #000000;
+}
+
+.homepage_start_arrow {
+	position: absolute;
+	overflow: visible;
+	width: 120px;
+	height: 200px;
+	left: 900px;
+	top: 830px;
+	cursor: pointer;
+}
+
+.homepage_background {
+	position: absolute;
+	overflow: visible;
+	width: 1920px;
+	height: 1080px;
+	left: 0px;
+	top: 0px;
+	opacity: 0.25;
+}
+
+.selection_background {
+	position: absolute;
+	overflow: visible;
+	width: 1920px;
+	height: 1080px;
+	left: 0px;
+	top: 1080px;
+	opacity: 0.3;
+}
+
+.voluntary_background {
+	position: absolute;
+	overflow: visible;
+	width: 1920px;
+	height: 1080px;
+	left: 0px;
+	top: 2160px;
+	opacity: 0.3;
+}
+
+.mandatory_background {
+	position: absolute;
+	overflow: visible;
+	width: 1920px;
+	height: 1080px;
+	left: 0px;
+	top: 3240px;
+	opacity: 0.3;
+}
+
+.homepage_title {
+	position: absolute;
+	overflow: visible;
+    width: 1105px;
+	height: 304px;
+    /*text-align: center;*/
+    left: 406px;
+	/*top: 165px;*/
+    top: 200px;
+}
+
+.homepage_start_button {
+	position: absolute;
+	overflow: visible;
+	width: 210px;
+	height: 70px;
+	left: 870px;
+	top: 938px;
+}
+
+#section_homepage * {
+	margin: 0;
+	padding: 0;
+}
+
+#section_homepage {
+	width: 1920px;
+	height: 1080px;
+	box-sizing: border-box;
+	width: 1920px;
+	height: 1080px;
+	background-color: #E9DCC2;
+	overflow: hidden;
+	margin: 0;
+	padding: 0;
+	opacity: 1;
+    text-align: center;
+	--web-view-name: section-homepage;
+	--web-view-id: section_homepage;
+	--web-enable-deep-linking: true;
+}
+
+#section_selection {
+	padding-top: 50px;
+	width: 1920px;
+	height: 1080px;
+	color: #000000;
+	background-color: #FFFFFF;
+}
+
+#section_mandatory {
+	padding-top: 50px;
+	width: 1920px;
+	height: 1080px;
+	color: #000000;
+	background-color: #FFFFFF;
+}
+
+#section_voluntary {
+	padding-top: 50px;
+	width: 1920px;
+	height: 1080px;
+	color: #000000;
+	background-color: #FFFFFF;
+}
+
+#mandatory_title {
+	width: 422.1px;
+	height: 257px;
+	position: absolute;
+	overflow: visible;
+	left: 180px;
+	top: 3360;
+}
+
+#mandatory_hr {
+	width: 422.1px;
+	height: 5px;
+	position: absolute;
+	overflow: visible;
+	left: 180px;
+	top: 3549.9px;
+	background-color: #42866B;
+	border-top: 0px;
+}
+
+.mandatory_first_word {
+	font-size: 64px;
+}
+
+#mandatory_text_1 {
+	opacity: 1;
+	position: absolute;
+	left: 210px;
+	top: 3634.9px;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	overflow: visible;
+	white-space: nowrap;
+	line-height: 36px;
+	margin-top: -3px;
+	text-align: left;
+	font-family: 華康魏碑體;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 34px;
+	color: #000000;
+}
+
+#mandatory_text_2 {
+	opacity: 1;
+	position: absolute;
+	left: 210px;
+	top: 3734.9px;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	overflow: visible;
+	white-space: nowrap;
+	line-height: 36px;
+	margin-top: -3px;
+	text-align: left;
+	font-family: 華康魏碑體;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 34px;
+	color: #000000;
+}
+
+#mandatory_text_3 {
+	opacity: 1;
+	position: absolute;
+	left: 210px;
+	top: 3834.9px;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	overflow: visible;
+	white-space: nowrap;
+	line-height: 36px;
+	margin-top: -3px;
+	text-align: center;
+	font-family: 華康魏碑體;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 34px;
+	color: #000000;
+}
+
+#mandatory_playlist_button {
+	position: absolute;
+	overflow: visible;
+	width: 300px;
+	height: 75px;
+	left: 180px;
+	top: 4062px;
+	background-color: rgba(0,0,0,0);
+    color: #000000;
+    border: 3px solid #7A7A7A;
+    border-radius: 10px;
+    font-size: 30px;
+    font-family: 華康魏碑體;
+    background-color: #7A7A7A;
+    color: #FFFFFF;
+    box-shadow: 6px 6px 6px rgba(20%,20%,40%,0.6),8px 8px 10px rgba(20%,20%,40%,0.4),10px 10px 16px rgba(20%,20%,40%,0.4);
+}
+
+#mandatory_playlist_button span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+}
+
+#mandatory_playlist_button span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 1;
+    top: 0;
+    right: -20px;
+    font-size: 30px;
+}
+
+#mandatory_playlist_button:active {
+    box-shadow: 2px 2px 2px rgba(20%,20%,40%,0.6),4px 4px 6px rgba(20%,20%,40%,0.4),6px 6px 12px rgba(20%,20%,40%,0.4);
+}
+
+#voluntary_title {
+	width: 531.65px;
+	height: 179.9px;
+	position: absolute;
+	overflow: visible;
+	left: 180px;
+	top: 2280px;
+}
+
+#voluntary_hr {
+	width: 531.65px;
+	height: 5px;
+	position: absolute;
+	overflow: visible;
+	left: 180px;
+	top: 2469.9px;
+	background-color: #E7BA30;
+	border-top: 0px;
+}
+
+.voluntary_first_word {
+	font-size: 64px;
+}
+
+#voluntary_text_1 {
+	opacity: 1;
+	position: absolute;
+	left: 210px;
+	top: 2554.9px;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	overflow: visible;
+	white-space: nowrap;
+	line-height: 36px;
+	margin-top: -3px;
+	text-align: left;
+	font-family: 華康魏碑體;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 34px;
+	color: #000000;
+}
+
+#voluntary_text_2 {
+	opacity: 1;
+	position: absolute;
+	left: 210px;
+	top: 2654.9px;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	overflow: visible;
+	white-space: nowrap;
+	line-height: 36px;
+	margin-top: -3px;
+	text-align: left;
+	font-family: 華康魏碑體;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 34px;
+	color: #000000;
+}
+
+#voluntary_text_3 {
+	opacity: 1;
+	position: absolute;
+	left: 210px;
+	top: 2754.9px;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	overflow: visible;
+	white-space: nowrap;
+	line-height: 36px;
+	margin-top: -3px;
+	text-align: center;
+	font-family: 華康魏碑體;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 34px;
+	color: #000000;
+}
+
+#voluntary_playlist_button {
+	position: absolute;
+	overflow: visible;
+	width: 300px;
+	height: 75px;
+	left: 180px;
+	top: 2982px;
+	background-color: rgba(0,0,0,0);
+    color: #000000;
+    border: 3px solid #7A7A7A;
+    border-radius: 10px;
+    font-size: 30px;
+    font-family: 華康魏碑體;
+    background-color: #7A7A7A;
+    color: #FFFFFF;
+    box-shadow: 6px 6px 6px rgba(20%,20%,40%,0.6),8px 8px 10px rgba(20%,20%,40%,0.4),10px 10px 16px rgba(20%,20%,40%,0.4);
+}
+
+#voluntary_playlist_button span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+}
+
+#voluntary_playlist_button span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 1;
+    top: 0;
+    right: -20px;
+    font-size: 30px;
+}
+
+#voluntary_playlist_button:active {
+    box-shadow: 2px 2px 2px rgba(20%,20%,40%,0.6),4px 4px 6px rgba(20%,20%,40%,0.4),6px 6px 12px rgba(20%,20%,40%,0.4);
+}
+
+
+
+.selection_mandatory_part {
+	position: absolute;
+	overflow: visible;
+	width: 600px;
+	height: 482.2px;
+	left: 1080px;
+	top: 1379px;
+	background-color: #FFFFFF;
+	box-shadow: 6px 6px 6px rgba(20%,20%,40%,0.6),8px 8px 10px rgba(20%,20%,40%,0.4),10px 10px 16px rgba(20%,20%,40%,0.4);
+	cursor: pointer;
+}
+
+.container_mandatory {
+  text-align: center;
+  padding: 10px 20px;
+  line-height: 60px;
+  font-family: 金梅毛國際行書碼;
+  font-weight: bold;
+  font-size: 36px;
+  margin-bottom: 0px;
+}
+
+.selection_mandatory_hr {
+	height: 3px;
+	background-color: #7A7A7A;
+	border-top: 0px;
+	margin-top: 0px;
+	margin-bottom: 20px;
+	margin-left: 10px;
+	margin-right: 10px;
+	opacity: 1;
+}
+
+.selection_mandatory_content {
+    padding: 0px 40px;
+    line-height: 20px;
+    font-family: 華康魏碑體;
+    font-size: 20px;
+    opacity: 1;
+}
+
+.selection_mandatory_part:active {
+	box-shadow: 2px 2px 2px rgba(20%,20%,40%,0.6),4px 4px 6px rgba(20%,20%,40%,0.4),6px 6px 12px rgba(20%,20%,40%,0.4);
+}
+
+.selection_voluntary_part {
+	position: absolute;
+	overflow: visible;
+	width: 600px;
+	height: 482.2px;
+	left: 240px;
+	top: 1379px;
+	background-color: #FFFFFF;
+	box-shadow: 6px 6px 6px rgba(20%,20%,40%,0.6),8px 8px 10px rgba(20%,20%,40%,0.4),10px 10px 16px rgba(20%,20%,40%,0.4);
+	cursor: pointer;
+}
+
+.container_voluntary {
+  text-align: center;
+  padding: 10px 20px;
+  line-height: 60px;
+  font-family: 金梅毛國際行書碼;
+  font-weight: bold;
+  font-size: 36px;
+  margin-bottom: 0px;
+}
+
+.selection_voluntary_hr {
+	height: 3px;
+	background-color: #7A7A7A;
+	border-top: 0px;
+	margin-top: 0px;
+	margin-bottom: 20px;
+	margin-left: 10px;
+	margin-right: 10px;
+	opacity: 1;
+}
+
+.selection_voluntary_content {
+    padding: 0px 40px;
+    line-height: 20px;
+    font-family: 華康魏碑體;
+    font-size: 20px;
+    opacity: 1;
+}
+
+.selection_voluntary_part:active {
+	box-shadow: 2px 2px 2px rgba(20%,20%,40%,0.6),4px 4px 6px rgba(20%,20%,40%,0.4),6px 6px 12px rgba(20%,20%,40%,0.4);
+}
+
+nav {
+    z-index: 2;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #E9DCC2;
+    width: 100%;
+    height: 80px;
+    opacity: 0.8;
+    position: fixed;
+    top: -80px;
+}
+
+nav ul li {
+    float: right;
+    height: 80px;
+    width: 150px;
+    background-color: #E9DCC2;
+    border-left: 3px solid;
+    border-color: #C6AE80;
+    cursor: pointer;
+    display: inline-block;
+}
+
+nav ul li:active {
+    border-left: 6px solid;
+    border-top: 6px solid;
+    border-bottom: 6px solid;
+    border-right: 3px solid;
+    border-color: #C6AE80;
+}
+
+nav ul li a {
+    display: block;
+    text-align: center;
+    padding: 28px 24px;
+    text-decoration: none;
+    font-size: 18px;
+    font-family: 微軟正黑體;
+    font-weight: bold;
+    color: #5A5A5A;
+}
+
+nav ul li a:active {
+    background-color: #7A7A7A;
+    color: #FFFFFF;
+    height: 68px;
+    padding: 22px 24px;
+}
+
+nav ul li a.active {
+    color: #FFFFFF;
+    background-color: #337AB7;
+}
+
+footer {
+	background-color: #A33933;
+	padding-top: 10px;
+	padding-bottom: 0px;
+	color: #ffffff;
+	font-size: 20px;
+	font-family: 微軟正黑體;
+	font-weight: bold;
+	width: 1920px;
+	position: relative;
+	bottom: 0px;
+}
